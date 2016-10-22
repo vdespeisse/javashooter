@@ -11,9 +11,14 @@ class Vector {
 }
 
 
+// function normalize(vec) {
+//   var l = Math.sqrt(vec.x*vec.x+ vec.y*vec.y)
+//   return new Vector(vec.x/l,vec.y/l)
+// }
+
 function normalize(vec) {
-  var l = Math.sqrt(vec.x*vec.x+ vec.y*vec.y)
-  return new Vector(vec.x/l,vec.y/l)
+  var l = Math.sqrt(vec[0]*vec[0]+ vec[1]*vec[1])
+  return {x :vec[0]/l,y : vec[1]/l}
 }
 
 function distance(a,b) {
